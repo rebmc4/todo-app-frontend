@@ -5,8 +5,8 @@ class ListItem extends Component {
         return (
             <li>
                 {this.props.task}
-                <button>Done</button>
-                <button>Delete</button>
+                <button type="button" class="btn btn-light">Done</button>
+                <button type="button" class="btn btn-light">Delete</button>
             </li>
         );
     }

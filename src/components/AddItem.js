@@ -7,7 +7,7 @@ class AddItem extends Component {
                 <form>
                     <label>Type tasks to be completed</label>
                     <input type="text" />
-                    <button type="button">Add</button>
+                    <button type="button" class="btn btn-light">Add</button>
                 </form>
             </div>
         );
