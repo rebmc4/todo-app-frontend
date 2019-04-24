@@ -1,7 +1,16 @@
-.btn-light {
+.yellowButton {
     border-color: lemonchiffon; 
     color: lemonchiffon;
     background-color: darkslateblue; 
     border-style: dotted;
     font-family: Arial, Helvetica, sans-serif
+}
+
+label {
+    font-family: arial; 
+    padding: 1.5%; 
+}
+
+ul {
+    font-family: arial;
 }
