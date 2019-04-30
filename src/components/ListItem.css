@@ -1,4 +1,3 @@
-
 .purpleButton {
     border-color: lemonchiffon; 
     color: lemonchiffon;
@@ -8,8 +7,8 @@
     padding: 5px 8px;
 } 
 
-ul {
-    text-align: left;
+li {
+    text-align: center;
     list-style: inside;
-    padding: 4%;
+    padding: 2%;
   }

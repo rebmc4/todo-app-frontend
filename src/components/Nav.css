@@ -2,8 +2,9 @@ h1 {
     color: darkslateblue;
     border-style: dotted;
     background-color: lavender;
-    padding: 1% 1%;
+    padding: 2% 2%;
     font-size: 50; 
     font-family: 'Homemade Apple';
     text-align: center;
+    background-image: url(images/feather5.jpg)
 }

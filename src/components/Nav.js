@@ -6,6 +6,7 @@ class Nav extends Component {
             <nav>
                 <h1>{this.props.text}</h1>
             </nav>
+
         );
     }
 }
