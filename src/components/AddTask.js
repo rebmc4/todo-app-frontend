@@ -11,8 +11,7 @@ class AddTask extends Component {
     }
 
     addTaskClicked = () => {
-        // alert(`Will save the following task ${this.state.taskDescription}`);
-        this.props.addTaskFunction();
+        this.props.addTaskFunction(this.state.taskDescription);
     }
 
     render() {
