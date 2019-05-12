@@ -1,0 +1,18 @@
+h4 {
+    color: rgb(54, 26, 82);
+    font-family: 'Arapey', 'serif'; 
+    text-align: center; 
+    font-size: 40;
+}
+
+.nav {
+    text-align: center; 
+}
+
+.addTask {
+    text-align: center; 
+}
+
+.taskCounter {
+    text-align: center; 
+}

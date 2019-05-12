@@ -7,8 +7,10 @@
     padding: 5px 8px;
 } 
 
-li {
+.col-3 {
     text-align: center;
-    list-style: inside;
-    padding: 2%;
-  }
+}
+
+.overdue {
+ color: red;
+}
