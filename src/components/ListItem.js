@@ -3,7 +3,7 @@ import moment from "moment";
 class ListItem extends Component {
 
 
-    deletedTask = () => {
+    deleteTask = () => { 
         this.props.deleteTask(this.props.id);
 
     }
@@ -35,7 +35,7 @@ class ListItem extends Component {
                         {this.props.completed ? <p>Completed</p> : <p>Not completed</p>}
                     </div>
                     <div className="col-2">
-                        <button type="button" className="btn purpleButton" onClick={this.handleDeleteClick}>Delete</button>
+                        <button type="button" className="btn purpleButton" onClick={this.deleteTask}>Delete</button>
                     </div>
                     <div className="col-2">
                         {!this.props.completed && (

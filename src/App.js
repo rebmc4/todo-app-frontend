@@ -10,14 +10,15 @@ import './components/ListItem.css';
 import './components/Nav.css';
 import './components/TaskCounter.css';
 import moment from 'moment';
+import uuid from 'uuid/v4';
 
 class App extends Component {
 
   state = {
     tasks: [
-      {task: "buy some milk", completed: false, date: moment("01-05-2019", "DD-MM-YYYY")},
-      {task: "walk the dog", completed: true, date: moment("05-05-2019", "DD-MM-YYYY")},
-      {task: "go for a walk", completed: false, date: moment("04-05-2019", "DD-MM-YYYY")}
+      {task: "buy some milk", completed: false, date: moment("01-05-2019", "DD-MM-YYYY"), id: uuid()},
+      {task: "walk the dog", completed: true, date: moment("05-05-2019", "DD-MM-YYYY"), id: uuid()},
+      {task: "go for a walk", completed: false, date: moment("04-05-2019", "DD-MM-YYYY"), id: uuid()}
     ]
   }
 
@@ -27,7 +28,7 @@ class App extends Component {
 
     // Make a fresh copy of the tasks array with slice
     const newTasks = this.state.tasks.slice();
-    const taskObject = {task: newTask, completed: false, date: date};
+    const taskObject = {task: newTask, completed: false, date: date, id: uuid()};
     newTasks.push(taskObject);
 
     // Always use setState to update any part of the state which needs to change
@@ -36,7 +37,7 @@ class App extends Component {
     });
   }
 
-  deletedTask = (id) => {
+  deleteTask = (id) => {
     const filteredTasks = this.state.tasks.filter(item => {
       if (item.id !== id) {
         return true;
@@ -56,7 +57,7 @@ class App extends Component {
       }
     });
     this.setState({
-      tasls: updatedTasks
+      tasks: updatedTasks
     })
   }
 
@@ -93,10 +94,11 @@ class App extends Component {
             return <ListItem task={item} 
             key={i} 
             index={i} 
-            deleteTaskFunction={this.deleteTask}
+            deleteTask={this.deleteTask}
             markTaskCompleted={this.markTaskCompleted}
             date={item.date}
             completed={item.completed}
+            id = {item.id}
             />
           })
         }
