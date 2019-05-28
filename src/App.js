@@ -53,10 +53,14 @@ class App extends Component {
   markTaskCompleted = id => {
     const updatedTasks = this.state.tasks.map(item => {
       if (item.id === id){
-      item.completed = true; 
+      item.completed = true;
+      // take each item one by one 
+      // find out whether we need to change completed property
+      // return item which may or may not have been changed into the array
       }
+      return item;
     });
-    this.setState({
+    this.setState({ 
       tasks: updatedTasks
     })
   }

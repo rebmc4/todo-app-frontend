@@ -8,7 +8,7 @@ class ListItem extends Component {
 
     }
 
-    handleCompleteClick = () => {
+    handleCompleteClick = () => { 
         this.props.markTaskCompleted(this.props.id);
 
     };
@@ -39,7 +39,7 @@ class ListItem extends Component {
                     </div>
                     <div className="col-2">
                         {!this.props.completed && (
-                            <button type="button" className="btn purpleButton" onClick={this.handCompleteClick}>Mark completed</button>
+                            <button type="button" className="btn purpleButton" onClick={this.handleCompleteClick}>Mark completed</button>
                         )}
                     </div>
                     {this.props.task.task}
